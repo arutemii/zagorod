@@ -222,11 +222,7 @@ a, #adv3 {
 	width: 1170px;
 	height: 750px;
 	margin: 0 auto;
-}
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-	#house-wrap {
-		padding-right: 1px;
-	}
+	padding-right: 1px;
 }
 
 #first {
