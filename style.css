@@ -113,23 +113,23 @@ body {
 	margin-top: 55px;
 }
 
-a, #adv1 {
-	background-image: url("images/adv_1.png");
+a, #rp1 {
+	background-image: url("images/rp_1.png");
 }
-#adv1:hover {
-	background-image: url("images/adv_1_hover.png");
+#rp1:hover {
+	background-image: url("images/rp_1_hover.png");
 }
-a, #adv2 {
-	background-image: url("images/adv_2.png");
+a, #rp2 {
+	background-image: url("images/rp_2.png");
 }
-#adv2:hover {
-	background-image: url("images/adv_2_hover.png");
+#rp2:hover {
+	background-image: url("images/rp_2_hover.png");
 }
-a, #adv3 {
-	background-image: url("images/adv_3.png");
+a, #rp3 {
+	background-image: url("images/rp_3.png");
 }
-#adv3:hover {
-	background-image: url("images/adv_3_hover.png");
+#rp3:hover {
+	background-image: url("images/rp_3_hover.png");
 }
 
 #footer {
