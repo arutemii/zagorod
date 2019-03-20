@@ -314,11 +314,11 @@ body {
 }
 
 #g1 {
-	width: 1000px;
-	height: 750px;
+	width: 800px;
+	height: 600px;
 	overflow: hidden;
-	left: calc(50% - 500px);
-	top: calc(50% - 375px);
+	left: calc(50% - 400px);
+	top: calc(50% - 300px);
 	position: absolute;
 	display: none;
 	background-color: white;
