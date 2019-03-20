@@ -1,5 +1,16 @@
 <html>
 <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
+	<script>
+	function show_gallery(gnum){
+		document.getElementById(gnum).style.display = "block";
+		$("#gallery").fadeIn();
+	}
+	function hide_gallery(){
+		$("#gallery").fadeOut();
+		document.getElementById("g1").style.display = "none";
+	}
+	</script>
 	<title>СК «Загород» – малоэтажное строительство в Новосибирске и НСО</title>
 	<meta charset="utf-8"/>
 	<link rel="icon" href="favicon.ico">
@@ -185,7 +196,7 @@
 		<div id="advantages">
 			<div class="text" style="font-size: 36px">НАШИ ПРЕИМУЩЕСТВА:<br><div class="text" style="font-size: 22.7px; padding-top: 6px">(НАЖМИ, ЧТОБЫ УЗНАТЬ ПОДРОБНЕЕ)</div></div>
 			<div style="text-align: left">
-				<a id="rp1" href="#"/></a>
+				<a id="rp1" onclick="show_gallery('g1')" href="javascript:void(0);"/></a>
 				<a style="margin: 0 28" id="rp2" href="#"/></a>
 				<a id="rp3" href="#"/></a>
 			</div>
@@ -196,14 +207,14 @@
 			<div class="left">
 				<div style="font-family: 'Bank Sans'; padding-top: 33px">КОНТАКТНАЯ ИНФОРМАЦИЯ:</div>
 				<div style="font-size: 24; padding-top: 10px">По всем интересующим вопросам обращайтесь:</div>
-				<div style="padding-top: 10px">+7 913 923 28 47 (Сергей)</div>
-				<div>+7 953 794 63 47 (Андрей)</div>
+				<div style="padding-top: 10px">+7 (983) 375-94-33, +7 (913) 009-22-70, <a id="email" href="mailto:kas1311@rambler.ru" target="_blank">kas1311@rambler.ru</a></div>
+				<div>пос. Восход (Новосибирский район), ул. Долинная 2в</div>
 			</div>
 			<div class="right">
 				<div style="font-family: 'Bank Sans'; padding-top: 33px">СОЦИАЛЬНЫЕ СЕТИ:</div>
 				<div style="font-size: 24; padding-top: 10px">Наши аккаунты в соц. сетях:</div>
-				<div style="padding-top: 10px;">Мы ВКонтакте<a id="vk" href="#"></a></div>
-				<div>Мы в Instagram<a id="inst" href="#"></a></div>
+				<div style="padding-top: 10px;">Мы ВКонтакте<a class="media-link" id="vk" href="#"></a></div>
+				<div>Мы в Instagram<a class="media-link" id="inst" href="#"></a></div>
 			</div>
 		</div>
 	</div>
@@ -213,5 +224,46 @@
 			<div class="right">МАЛОЭТАЖНОЕ СТРОИТЕЛЬСТВО В НОВОСИБИРСКЕ И НОВОСИБИРСКОЙ ОБЛАСТИ</div>
 		</div>
 	</div>
+	<div id="gallery">
+		<div class="closezone" onclick="hide_gallery()"></div>
+		<div id="g1">
+			<div class="mySlides fade">
+				<img src="images/IMG_0.jpg" style="width:100%">
+			</div>
+			<div class="mySlides fade">
+				<img src="images/IMG_1.jpg" style="width:100%">
+			</div>
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+	</div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+	showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+	showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+	var i;
+	var slides = document.getElementsByClassName("mySlides");
+	var dots = document.getElementsByClassName("dot");
+	if (n > slides.length) {slideIndex = 1}
+	if (n < 1) {slideIndex = slides.length}
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";
+	}
+	for (i = 0; i < dots.length; i++) {
+		dots[i].className = dots[i].className.replace(" active", "");
+	}
+	slides[slideIndex-1].style.display = "block";
+	dots[slideIndex-1].className += " active";
+}
+</script>
 </body>
 </html>

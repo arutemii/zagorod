@@ -111,21 +111,22 @@ body {
 	height: 348px;
 	display: inline-block;
 	margin-top: 55px;
+	outline: none;
 }
 
-a, #rp1 {
+#rp1 {
 	background-image: url("images/rp_1.png");
 }
 #rp1:hover {
 	background-image: url("images/rp_1_hover.png");
 }
-a, #rp2 {
+#rp2 {
 	background-image: url("images/rp_2.png");
 }
 #rp2:hover {
 	background-image: url("images/rp_2_hover.png");
 }
-a, #rp3 {
+#rp3 {
 	background-image: url("images/rp_3.png");
 }
 #rp3:hover {
@@ -146,7 +147,7 @@ a, #rp3 {
 #footer .left {
 	padding-left: 4px;
 	box-sizing: border-box;
-	width: 50%;
+	width: 65%;
 	height: 100%;
 	float: left;
 }
@@ -154,7 +155,7 @@ a, #rp3 {
 	text-align: right;
 	padding-right: 7px;
 	box-sizing: border-box;	
-	width: 50%;
+	width: 35%;
 	height: 100%;
 	float: right;
 }
@@ -189,13 +190,14 @@ a, #rp3 {
 	text-align: right;
 	float: right;
 }
-#footer a {
+#footer .media-link {
 	margin-top: 8px;
 	display: block;
 	float: right;
 	width: 30px;
 	height: 30px;
 	margin-left: 10px;
+	outline: none;
 }
 #vk {
 	background-image: url('images/VK.png');	
@@ -281,4 +283,79 @@ a, #rp3 {
 }
 #seventh:hover {
 	background-image: url('images/house_11_hover.png');
+}
+#email {
+	text-decoration: underline;
+	color: white;
+	outline: none;
+}
+
+#gallery {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-width: 1170px;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.75);
+	display: none;
+}
+
+#gallery .closezone {
+	width: 100%;
+	height: 100%;
+}
+#gallery .closezone:hover {
+	cursor: pointer;
+}
+
+.mySlides {
+	display: none;
+}
+
+#g1 {
+	width: 1000px;
+	height: 750px;
+	overflow: hidden;
+	left: calc(50% - 500px);
+	top: calc(50% - 375px);
+	position: absolute;
+	display: none;
+	background-color: white;
+}
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	margin-top: -22px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
+}
+@keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
 }
