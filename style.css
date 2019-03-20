@@ -304,9 +304,12 @@ body {
 #gallery .closezone {
 	width: 100%;
 	height: 100%;
+	color: grey;
+	transition: 0.3s linear;
 }
 #gallery .closezone:hover {
 	cursor: pointer;
+	color: white;
 }
 
 .mySlides {
@@ -358,4 +361,10 @@ body {
 @keyframes fade {
 	from {opacity: .4}
 	to {opacity: 1}
+}
+.closebutton {
+	position: absolute;
+	top: 15px;
+	right: 20px;
+	font-size: 40px;
 }
