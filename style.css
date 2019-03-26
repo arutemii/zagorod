@@ -371,3 +371,6 @@ body {
 	right: 20px;
 	font-size: 40px;
 }
+iframe {
+	border: 0px;
+}
