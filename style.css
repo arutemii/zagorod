@@ -305,7 +305,7 @@ body {
 	width: 100%;
 	height: 100%;
 	color: grey;
-	transition: 0.3s linear;
+	transition: 0.15s linear;
 }
 #gallery .closezone:hover {
 	cursor: pointer;
@@ -316,12 +316,14 @@ body {
 	display: none;
 }
 
-#g1 {
+#g1, #g2, #g3 {
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
 	width: 800px;
 	height: 600px;
-	overflow: hidden;
-	left: calc(50% - 400px);
-	top: calc(50% - 300px);
 	position: absolute;
 	display: none;
 	background-color: white;
@@ -368,4 +370,7 @@ body {
 	top: 15px;
 	right: 20px;
 	font-size: 40px;
+}
+.mySlides span:hover {
+	text-decoration: underline;
 }

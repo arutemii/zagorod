@@ -1,3 +1,7 @@
+<!--
+Sergey Potapenko <ysergey2009@yandex.ru>
+Artemiy Fedotov <arutemii@tuta.io>
+-->
 <html>
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
@@ -9,6 +13,7 @@
 	function hide_gallery(){
 		$("#gallery").fadeOut();
 		document.getElementById("g1").style.display = "none";
+		document.getElementById("g3").style.display = "none";
 	}
 	</script>
 	<title>СК «Загород» – малоэтажное строительство в Новосибирске и НСО</title>
@@ -196,9 +201,9 @@
 		<div id="advantages">
 			<div class="text" style="font-size: 36px">НАШИ ПРЕИМУЩЕСТВА:<br><div class="text" style="font-size: 22.7px; padding-top: 6px">(НАЖМИ, ЧТОБЫ УЗНАТЬ ПОДРОБНЕЕ)</div></div>
 			<div style="text-align: left">
-				<a id="rp1" onclick="show_gallery('g1')" href="javascript:void(0);"/></a>
-				<a style="margin: 0 28" id="rp2" href="#"/></a>
-				<a id="rp3" href="#"/></a>
+				<a id="rp1" onclick="show_gallery('g1')" href="javascript:void(0);"></a>
+				<a style="margin: 0 28" id="rp2" onclick="show_gallery('g2')" href="javascript:void(0);"></a>
+				<a id="rp3" onclick="show_gallery('g3')" href="javascript:void(0);"></a>
 			</div>
 		</div>
 	</div>
@@ -229,7 +234,7 @@
 			<div class="closebutton">✕</div>
 		</div>
 		<div id="g1">
-			<div class="mySlides fade">
+			<div class="mySlides fade" style="display: block">
 				<img src="images/IMG_0.jpg" style="width:100%">
 			</div>
 			<div class="mySlides fade">
@@ -247,36 +252,32 @@
 			<div class="mySlides fade">
 				<img src="images/IMG_5.jpg" style="width:100%">
 			</div>
-			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			<a class="prev" onclick="plusSlides(-1, 'g1')">&#10094;</a>
+			<a class="next" onclick="plusSlides(1, 'g1')">&#10095;</a>
+		</div>
+		<div id="g3">	
+			<div class="mySlides fade" style="display: block; background-image: url('images/g3_bg.jpg'); height: 100%">
+				<div style="text-shadow: 1px 3px 3px rgba(110, 108, 112, 0.3); color: #2e0e54; text-align: center; padding-top: 50px; padding-bottom: 30px; font-size: 55px; font-family: 'Bank Sans'">МЯГКИЙ АСФАЛЬТ</div>
+			<div style="font-family: 'Akrobat-Bold'; font-size: 27px; line-height: 33px; padding: 0 80px; text-align: justify;">Предлагаем вам новинку «Мягкий асфальт» своими руками! Вы получаете уникальный набор для самостоятельной укладки травмобезопасного противоскользящего покрытия из резиновой крошки. При смешивании компонентов получается бесшовное покрытие, которое прекрасно подойдёт для укладки лестниц, садовых дорожек, террас, детских площадок и т.д. Один набор рассчитан на 1 - 1,5 кв. м. в зависимости от толщины слоя. Также производим укладку покрытия. Мы находимся по адресу: <span>пос. Восход (Новосибирский район), ул. Долинная 2в.</span><br><br>Продолжайте просмотр, чтобы узнать больше информации.</div>
+			</div>
 		</div>
 	</div>
 <script>
 var slideIndex = 1;
-showSlides(slideIndex);
 
-function plusSlides(n) {
-	showSlides(slideIndex += n);
+function plusSlides(n, gal) {
+	showSlides(slideIndex += n, gal);
 }
 
-function currentSlide(n) {
-	showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
+function showSlides(n, gal) {
 	var i;
-	var slides = document.getElementsByClassName("mySlides");
-	var dots = document.getElementsByClassName("dot");
+	var slides = document.getElementById(gal).getElementsByClassName("mySlides");
 	if (n > slides.length) {slideIndex = 1}
 	if (n < 1) {slideIndex = slides.length}
 	for (i = 0; i < slides.length; i++) {
 		slides[i].style.display = "none";
 	}
-	for (i = 0; i < dots.length; i++) {
-		dots[i].className = dots[i].className.replace(" active", "");
-	}
 	slides[slideIndex-1].style.display = "block";
-	dots[slideIndex-1].className += " active";
 }
 </script>
 </body>
