@@ -285,9 +285,10 @@ body {
 	background-image: url('images/house_11_hover.png');
 }
 #email {
-	text-decoration: underline;
+	border-bottom: 2px solid;
 	color: white;
 	outline: none;
+	text-decoration: none;
 }
 
 #gallery {
