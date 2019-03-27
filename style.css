@@ -190,7 +190,7 @@ body {
 	text-align: right;
 	float: right;
 }
-#footer .media-link {
+.media-link {
 	margin-top: 8px;
 	display: block;
 	float: right;
@@ -370,4 +370,13 @@ body {
 	top: 15px;
 	right: 20px;
 	font-size: 40px;
+}
+#loc {
+	background-image: url('images/Location.png');
+	float: left;
+	margin-left: 1px;
+	margin-right: 10px;
+}
+#loc:hover {
+	background-image: url('images/Location_hover.png');
 }
