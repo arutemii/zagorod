@@ -7,7 +7,8 @@ Artemiy Fedotov <arutemii@tuta.io>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
 	<script>
 	function show_gallery(gnum){
-		plusSlides(0, gnum);
+		if(gnum != "map") plusSlides(0, gnum);
+
 		document.getElementById(gnum).style.display = "block";
 		$("#gallery").fadeIn();
 	}
