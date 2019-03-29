@@ -390,6 +390,7 @@ body {
 	height: 130px;
 	background-position: center;
 	border-radius: 15px;
+	display: block;
 }
 .item-desc {
 	font-family: 'Akrobat-Bold';
